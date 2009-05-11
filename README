@@ -1,1 +1,5 @@
-My resume.
+My resume.  To build run:
+latex resume.tex
+dvipdf resume.dvi
+
+That should generate a pdf version.
