@@ -6,7 +6,7 @@ require 'yaml'
 task :default => :build
 
 task :build => [:clean, :fill_template] do |t|
-  `latex target/ready_resume.tex`
+  `latex  -interaction=batchmode -output-directory=target target/ready_resume.tex`
   `dvipdf target/ready_resume.dvi target/resume.pdf`
 end
 
