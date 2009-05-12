@@ -2,3 +2,5 @@ My resume.  To build run:
 rake
 
 You must have latex installed and dvipdf
+
+The beauty of this system, aside from version control and being able to fork my own resume is that I can put comments into my resume.  Easter egg!
