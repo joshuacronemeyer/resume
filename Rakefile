@@ -14,12 +14,7 @@ task :fill_template => :configure do |t|
   content = nil
   File.open('resume.tex') { |f| content = f.readlines }
   template_marker_index = content.index("%FILL_IN_TOP_SECRET_ADDRESS\n")
-  if template_marker_index.nil?
-    puts "Address Marker Not Found"
-    exit(1)
-  else
-    content.insert(template_marker_index + 1, "\\address{#{@address}}") unless template_marker_index.nil?
-  end
+  content.insert(template_marker_index + 1, "\\address{#{@address}}") unless template_marker_index.nil?
   mkdir('target')
   File.open('target/ready_resume.tex', "w"){ |f| f.puts(content) }
 end
