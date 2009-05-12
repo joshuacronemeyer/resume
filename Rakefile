@@ -20,9 +20,7 @@ task :fill_template => :configure do |t|
 end
 
 task :configure do |t|
-  content = nil
-  File.open( 'config.yml' ) { |yf| content = YAML::load( yf ) }
-  @address = content['address']
+  File.open( 'config.yml' ) { |yf| @address = YAML::load( yf )['address'] }
 end
 
 task :clean do |t|
