@@ -1,5 +1,4 @@
 My resume.  To build run:
-latex resume.tex
-dvipdf resume.dvi
+rake
 
-That should generate a pdf version.
+You must have latex installed and dvipdf
